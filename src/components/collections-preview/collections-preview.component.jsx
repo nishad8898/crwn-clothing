@@ -1,9 +1,9 @@
 import React from 'react';
-import './collection-preview.styles.scss';
+import './collections-preview.styles.scss';
 import ComponentItem from '../collection-item/collection-item.component';
 import { withRouter } from 'react-router';
 
-const CollectionPreview = ({title, items, history, match, routeName})=>(
+const CollectionsPreview = ({title, items, history, match, routeName})=>(
     <div className='collection-preview'>
         <h1 className='title' 
             onClick={()=> history.push(`${match.path}/${routeName}`)} >{title.toUpperCase()}</h1>
@@ -19,4 +19,4 @@ const CollectionPreview = ({title, items, history, match, routeName})=>(
     </div>
 );
 
-export default withRouter(CollectionPreview);
+export default withRouter(CollectionsPreview);
